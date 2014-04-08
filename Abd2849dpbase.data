@@ -1,0 +1,38 @@
+RESTART
+'../model/Abd2849dpfc' 508
+/
+
+SUMMARY	
+
+RECU
+
+
+Rate 1 month EXACT FIELD WELL end
+Freq 1  1  1
+
+EFOR WELL 'DD.MM.YYYY' MDL MDU RAD SKIN MULT
+
+EUNI METRes METRes /
+
+--------OLD_INCL-------
+INCLUDE 
+  'GEOLDP/WELL/Well.dat' /
+INCLUDE 
+  'INCLDP/perf.inc' /
+INCLUDE 
+  'INCLDP/event.inc' /
+
+USERFILE
+  'INCLDP/Userfile.inc' /
+
+
+--------FC_INCL-------
+INCLUDE 
+  'INCLfc/event.inc' /
+--------FC_INCL-------
+ 
+READ 1 APR 2034 /
+
+STOP
+
+END
